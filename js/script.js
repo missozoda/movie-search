@@ -16,6 +16,8 @@ let normalizedMovies = kinolar.map((kino, i) => {
 
 
 let createMovieItem = (movie) => {
+  elMovieList.innnerHTML = "";
+
   let elNewLi = elTemplateMovie.cloneNode(true);
 
   elNewLi.querySelector(".title").textContent = `Title: ${movie.title}`;
