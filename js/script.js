@@ -15,7 +15,6 @@ let normalizedMovies = kinolar.map((kino, i) => {
   }
 })
 
-
 let createMovieItem = (movie) => {
   elMovieList.innnerHTML = "";
 
@@ -43,7 +42,6 @@ rendomMovies(normalizedMovies);
 
 elMovieForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  evt.target;
 
   let searchMovie = new RegExp(elMovieInput.value.trim(), "gi");
 
