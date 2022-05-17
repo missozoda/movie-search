@@ -49,6 +49,11 @@ elMovieForm.addEventListener("submit", (evt) => {
     if (movie.title.match(searchMovie)){
       return true;
     }
+    else{
+      elMovieInput.placeholder = "Not find";
+      elMovieInput.value = null;
+      return false;
+    }
   })
   rendomMovies(searchResult);
 })
