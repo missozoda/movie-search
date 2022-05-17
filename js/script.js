@@ -16,14 +16,14 @@ let normalizedMovies = kinolar.map((kino, i) => {
 })
 
 let createMovieItem = (movie) => {
-  elMovieList.innnerHTML = "";
+  elMovieList.innerHTML = "";
 
   let elNewLi = elTemplateMovie.cloneNode(true);
 
-  $(".title", elNewLi).textContent = movie.title;
-  $(".cast", elNewLi).textContent = movie.cast;
-  $(".genres", elNewLi).textContent = movie.genres;
-  $(".year", elNewLi).textContent = movie.year;
+  $(".title", elNewLi).textContent = `Title: ${movie.title}`;
+  $(".cast", elNewLi).textContent = `Cast: ${movie.cast}`;
+  $(".genres", elNewLi).textContent = `Genres: ${movie.genres}`;
+  $(".year", elNewLi).textContent = `Year: ${movie.year}`;
   
   return elNewLi;
 }
@@ -42,14 +42,13 @@ rendomMovies(normalizedMovies);
 
 elMovieForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
-
+  
   let searchMovie = new RegExp(elMovieInput.value.trim(), "gi");
-
+  
   let searchResult = normalizedMovies.filter((movie) => {
     if (movie.title.match(searchMovie)){
-      return movie.title.match(searchMovie);
+      return true;
     }
   })
-
   rendomMovies(searchResult);
 })
