@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container p-2">
+    <h2 class="heading m-2 fs-2 fw-bold text-primary text-center">Movies</h2>
+
+    <form class="movie-form d-flex justify-content-center" action="https://echo.htmlacademy.ru" method="post">
+      <input class="movie-input mt-3 fs-5 border-primary" type="text" id="input-movie" placeholder="Title" autofocus autocomplete="off" aria-label="search title" style="outline: none;">
+    </form>
+
+    <ul class="movie-list row list-unstyled text-center"></ul>
+  </div>
+
+  <template id="template">
+    <li class="movie-item col-3 my-3 border border-2 border-primary  rounded-2">
+      <h4 class="title fw-bold">Small Town Saturday Night</h4>
+      <p class="cast">Chris Pine","Shawn Christian","John Hawkes","Bre Blair","Muse Watson","Robert Pine","Brent Briscoe","Lin Shaye</p>
+      <p class="genres">Drama</p>
+      <p class="year">2010</p>
+    </li>
+  </template>
+
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/kinolar.js"></script>
+  <script src="./js/utils.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
